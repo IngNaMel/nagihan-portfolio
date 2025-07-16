@@ -23,6 +23,11 @@
       padding-bottom: 20px;
       border-bottom: 1px solid #ccc;
     }
+    header img {
+      width: 150px;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
     h1 {
       margin: 0;
     }
@@ -43,45 +48,80 @@
       color: #0073e6;
       text-decoration: none;
     }
+    .lang-switch {
+      text-align: right;
+    }
+    .lang-switch button {
+      margin: 10px 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
   </style>
+  <script>
+    function switchLang(lang) {
+      const de = document.querySelectorAll('.de');
+      const en = document.querySelectorAll('.en');
+      de.forEach(el => el.style.display = lang === 'de' ? 'block' : 'none');
+      en.forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
+    }
+    window.onload = () => switchLang('en');
+  </script>
 </head>
 <body>
   <div class="container">
+    <div class="lang-switch">
+      <button onclick="switchLang('en')">English</button>
+      <button onclick="switchLang('de')">Deutsch</button>
+    </div>
     <header>
       <h1>Nagihan Melek Kuscu</h1>
       <p>International Sales Manager | Wirtschaftsingenieurin | Team Leader</p>
+      <img src="Foto.png" alt="Nagihan Melek Kuscu" />
     </header>
 
-    <div class="section">
+    <div class="section en">
+      <h2>Profile</h2>
+      <p>Experienced international sales manager with a technical background in industrial engineering and a focus on B2B client development. Skilled in strategic customer acquisition, team leadership, and intercultural communication across the DACH region and Turkey. Flexible work authorization in Germany, Switzerland, and Turkey – with preferred locations in Switzerland and Turkey.</p>
+    </div>
+    <div class="section de">
       <h2>Profil</h2>
-      <p>Erfahrene internationale Vertriebsmanagerin mit technischem Hintergrund im Wirtschaftsingenieurwesen und einem Fokus auf B2B-Kundengeschäfte. Erfahrung im strategischen Aufbau von Kundenbeziehungen, in der Teamführung sowie im interkulturellen Arbeiten in der DACH-Region und der Türkei. Ich bin flexibel einsetzbar in Deutschland, der Schweiz und der Türkei – mit bevorzugtem Einsatz in der Türkei und der Schweiz.</p>
+      <p>Erfahrene internationale Vertriebsmanagerin mit technischem Hintergrund im Wirtschaftsingenieurwesen und Fokus auf B2B-Kundengeschäfte. Erfahrung im Aufbau strategischer Kundenbeziehungen, Teamführung und interkultureller Kommunikation in der DACH-Region und der Türkei. Flexibel einsetzbar in Deutschland, der Schweiz und der Türkei – mit Präferenz für die Schweiz und die Türkei.</p>
     </div>
 
-    <div class="section">
+    <div class="section en">
+      <h2>Professional Experience</h2>
+      <p><strong>Sales Manager</strong>, ELLER foodPackaging GmbH (09/2023 – present)<br />Key account management, tenders, client presentations, and contract negotiation.</p>
+      <p><strong>Founder & Director</strong>, Kuscu Transporte (2013–2023)<br />Full business operations, customer acquisition, technical logistics, team leadership.</p>
+      <p><strong>Leibniz Institute</strong> (2019–2023)<br />Project coordination in data and participant management.</p>
+    </div>
+    <div class="section de">
       <h2>Berufserfahrung</h2>
-      <p><strong>Sales Manager</strong>, ELLER foodPackaging GmbH<br />
-      09/2023 – heute<br />
-      Internationale Key-Account-Betreuung, Angebotsmanagement, Kundenpräsentationen und Vertragsverhandlungen.</p>
-
-      <p><strong>Unternehmerin</strong>, Kuscu Transporte & Montagearbeiten<br />
-      07/2013 – 04/2023<br />
-      Unternehmensführung, Kundenakquise, technische Projektabwicklung und Teamleitung.</p>
-
-      <p><strong>Leibniz-Institut</strong><br />
-      12/2019 – 04/2023<br />
-      Projektkoordination im Bereich Datenerhebung und Teilnehmermanagement.</p>
+      <p><strong>Sales Manager</strong>, ELLER foodPackaging GmbH (09/2023 – heute)<br />Key-Account-Betreuung, Angebotslegung, Kundenpräsentationen und Vertragsverhandlungen.</p>
+      <p><strong>Unternehmerin</strong>, Kuscu Transporte (2013–2023)<br />Gesamtverantwortung, Kundenakquise, technische Logistikabwicklung, Personalführung.</p>
+      <p><strong>Leibniz-Institut</strong> (2019–2023)<br />Projektkoordination in Datenerhebung und Teilnehmermanagement.</p>
     </div>
 
-    <div class="section">
+    <div class="section en">
+      <h2>Education & Certifications</h2>
+      <p>B.Sc. Industrial Engineering – University of Bremen (2018–2022)</p>
+      <p>Certified Export & Customs Specialist (IHK) – expected 05/2025</p>
+    </div>
+    <div class="section de">
       <h2>Ausbildung & Weiterbildung</h2>
-      <p><strong>Bachelor Wirtschaftsingenieurwesen</strong>, Universität Bremen<br />
-      10/2018 – 03/2022</p>
-
-      <p><strong>Zertifikat: Export- und Zollabwicklung</strong> (IHK)<br />
-      Abschluss: 05/2025</p>
+      <p>B.Sc. Wirtschaftsingenieurwesen – Universität Bremen (2018–2022)</p>
+      <p>Zertifikat Export- & Zollabwicklung (IHK) – Abschluss: 05/2025</p>
     </div>
 
-    <div class="section">
+    <div class="section en">
+      <h2>Languages & IT Skills</h2>
+      <ul>
+        <li>German, Turkish (native)</li>
+        <li>English (fluent)</li>
+        <li>French, Spanish (basic)</li>
+        <li>MS Office, SAP S/4HANA, C/C++ (basic)</li>
+      </ul>
+    </div>
+    <div class="section de">
       <h2>Sprachen & IT</h2>
       <ul>
         <li>Deutsch, Türkisch (Muttersprache)</li>
